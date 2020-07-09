@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Randomizer Lottery App</title>
+<!-- Link Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
+
+<script>
+
+
+alert("We are going to check your fortune.");
+// prompt to get input for User name
+var username= prompt("Hey enter your name :");
+
+// Add Car Images
+
+var bmw = document.createElement("img");
+bmw.setAttribute("src","images/bmw.jpg");
+bmw.setAttribute('height','200px');
+bmw.setAttribute('width','400px');
+
+var audi = document.createElement("img");
+audi.setAttribute("src","images/audi.jpg");
+audi.setAttribute('height','200px');
+audi.setAttribute('width','400px');
+
+var rr = document.createElement("img");
+rr.setAttribute("src","images/rr.jpg");
+rr.setAttribute('height','200px');
+rr.setAttribute('width','400px');
+
+// create array for Car Images
+
+var carImage = new Array(bmw,audi, rr);
+
+// create array for Car Names
+
+var carName = new Array("BMW", "Audi", "RR");
+
+// generate random number between 0 to 2 (Because carName's length is 2)
+
+var randomNumber = Math.floor(Math.random()*carName.length);
+
+// condition(if-else) that if user enters Chiraag or Chris then only they will see that they won the car
+
+if (username.toLowerCase() == "chiraag" ||username.toLowerCase() == "chris") {
+
+document.write("<h1>" + "Hi " + username + ", you won " + carName[randomNumber] + "!</h1>");
+
+document.body.appendChild(carImage[randomNumber]);
+
+          }
+
+else 
+{
+
+document.write("<h1>" + "Hi " + username + "!</h1>");
+document.write("<br>");
+document.write("<h2>Better Luck Next Time !</h2>");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html> 
